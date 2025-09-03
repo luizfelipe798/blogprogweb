@@ -7,7 +7,7 @@ CREATE TABLE usuario
     nome               VARCHAR(50)       NOT NULL,
     email              VARCHAR(255)      NOT NULL,
     senha              CHAR(60)          NOT NULL,
-    data_criacao       DATETIME          NOT NULL   DEFAULT 'CURRENT_TIMESTAMP',
+    data_criacao       DATETIME          NOT NULL   DEFAULT CURRENT_TIMESTAMP,
     ativo              TINYINT(4)        NOT NULL DEFAULT '0',
     adm                TINYINT(4)        NOT NULL DEFAULT '0'
 );
@@ -21,5 +21,7 @@ CREATE TABLE post
     data_criacao      DATETIME           NOT NULL,
     data_postagem     DATETIME           NOT NULL,
     
-    FOREIGN KEY(usuario_id)   REFERENCES   usuario(id)
+    KEY fk_post_usuario_idx(usuario_id),
+    CONSTRAINT fk_post_usuario FOREIGN KEY(usuario_id) REFERENCES usuario(id)
 );
+
