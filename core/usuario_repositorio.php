@@ -21,7 +21,7 @@
         case 'insert':
             $dados = ['nome' => $nome,
                       'email' => $email,
-                      'senha' => $crypt($senha, $salt)];
+                      'senha' => crypt($senha, $salt)];
 
             insere('usuario', $dados);
 
@@ -85,7 +85,7 @@
             $id = (int)$id;
             $valor = (int)$valor;
 
-            $dados = ('adm' => valor);
+            $dados = ['adm' => valor];
 
             $criterio = [['id'], '=', $id];
 
