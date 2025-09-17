@@ -2,7 +2,7 @@
     session_start();
     require_once '../includes/valida_login.php';
     require_once '../includes/funcoes.php';
-    require_once 'conexao.mysql.php';
+    require_once 'conexao_mysql.php';
     require_once 'sql.php';
     require_once 'mysql.php';
 
@@ -40,14 +40,18 @@
                         'usuario_id'          =>    $_SESSION['login']['usuario']['id']
                      ];
 
-            $criterio = [['id'], '=', $id];
+            $criterio = [
+                ['id', '=', $id]
+            ];
 
             atualiza('post', $dados, $criterio);
 
         break;
 
         case 'delete':
-            $criterio = [['id'], '=', $id];
+            $criterio = [
+                ['id', '=', $id]
+            ];
 
             deleta('post', $criterio);
 

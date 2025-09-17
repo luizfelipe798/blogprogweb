@@ -2,7 +2,7 @@
 <head>
     <title>Post | Projeto para Web com PHP</title>
     <link rel="stylesheet"
-          href="lib/bootstrap-4.2.1-dist/css/boostrap.min.css">
+          href="lib/bootstrap-4.2.1-dist/css/bootstrap.min.css">
 </head>
 <body>
     <div class="container">
@@ -11,7 +11,7 @@
                 <?php
                     include 'includes/topo.php';
                     include 'includes/valida_login.php';
-                    ?>
+                ?>
             </div>
         </div>
         <div class="row" style="min-height: 500px;">
