@@ -22,7 +22,7 @@
                     require_once 'core/sql.php';
                     require_once 'core/mysql.php';
 
-                    if(!isset($_SESSION['login']))
+                    if(isset($_SESSION['login']))
                     {
                         $id = (int) $_SESSION['login']['usuario']['id'];
 

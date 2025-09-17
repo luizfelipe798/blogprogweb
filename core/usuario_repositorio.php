@@ -19,9 +19,10 @@
     switch($acao)
     {
         case 'insert':
-            $dados = ['nome' => $nome,
-                      'email' => $email,
-                      'senha' => crypt($senha, $salt)];
+            $dados = [
+                'nome' => $nome,
+                'email' => $email,
+                'senha' => crypt($senha, $salt)];
 
             insere('usuario', $dados);
 
