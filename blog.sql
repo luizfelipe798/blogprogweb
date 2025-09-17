@@ -25,5 +25,16 @@ CREATE TABLE post
     CONSTRAINT fk_post_usuario FOREIGN KEY(usuario_id) REFERENCES usuario(id)
 );
 
+DELETE FROM usuario;
+
+UPDATE usuario
+SET ativo = 1, adm = 1
+WHERE id = 24;
+
 SELECT * FROM usuario;
 SELECT * FROM post;
+
+TRUNCATE TABLE post;
+
+INSERT INTO post(titulo, texto, usuario_id, data_criacao, data_postagem)
+VALUES('Teste de postzinho para o blog', 'textinho para o blogzinho do professor murilo e do professor cassio', '24', '2025-09-17', '2025-08-10');

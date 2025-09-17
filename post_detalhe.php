@@ -1,6 +1,6 @@
 <?php
     require_once 'includes/funcoes.php';
-    require_once 'core/conexao_mysqli.php';
+    require_once 'core/conexao_mysql.php';
     require_once 'core/sql.php';
     require_once 'core/mysql.php';
 
@@ -15,7 +15,7 @@
             'titulo',
             'data_postagem',
             'texto',
-            '(select name from usuario where usuario.id = post.usuario_id as nome'
+            '(select nome from usuario where usuario.id = post.usuario_id) as nome'
         ],
         [
             ['id', '=', $post]
