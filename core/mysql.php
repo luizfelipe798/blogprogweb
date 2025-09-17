@@ -145,9 +145,9 @@
             $expressao[count($expressao) - 1] = '?';
             $coringa_criterio[] = $expressao;
 
-            $nome_campo = (count($expressao) < 4) ? $expressao : $expressao[1];
+            $nome_campo = (count($expressao) < 4) ? $expressao[0] : $expressao[1];
 
-            if(isset($nome_campo))
+            if(isset($$nome_campo))
             {
                 $nome_campo = $nome_campo . '_' . rand();
             }
@@ -158,7 +158,6 @@
         }
 
         $instrucao = select($entidade, $campos, $coringa_criterio, $ordem);
-
         $conexao = conecta();
 
         $stmt = mysqli_prepare($conexao, $instrucao);

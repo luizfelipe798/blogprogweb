@@ -3,9 +3,10 @@
     {
         $servidor = 'localhost';
         $banco = 'blog';
-        $port = 3307;
-        $usuario = "root";
+        $port = 3306;
+        $usuario = 'root';
         $senha = '815674815';
+
         $conexao = mysqli_connect($servidor, $usuario, $senha, $banco, $port);
 
         if(!$conexao)
@@ -15,7 +16,7 @@
             echo 'Debugging error: ' . mysqli_connect_error() . PHP_EOL;
             return null;
         }
-
+        
         return $conexao;
     }
 

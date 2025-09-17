@@ -64,8 +64,13 @@
 
             foreach($criterio as $expressao)
             {
-                $instrucao .= " ORDER BY $ordem ";
+                $instrucao .= ' ' . implode(' ', $expressao);
             }
+        }
+
+        if(!empty($ordem))
+        {
+            $instrucao .= " ORDER BY $ordem ";
         }
         
         return $instrucao;
