@@ -24,7 +24,7 @@
                 && ($_SESSION['login']['usuario']['adm'] === 1)) : ?>
             
             <li class="nav-item">
-                <a class="nav-link" href="usuarios_php">Usuários</a>
+                <a class="nav-link" href="usuarios.php">Usuários</a>
             </li>
             <?php endif; ?>
         </ul>
