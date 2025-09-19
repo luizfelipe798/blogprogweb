@@ -72,13 +72,13 @@
             $id = (int)$id;
             $valor = (int)$valor;
 
-            $dados = ['ativo' => valor];
+            $dados = ['ativo' => $valor];
 
             $criterio = [['id', '=', $id]];
 
             atualiza('usuario', $dados, $criterio);
 
-            header('Location: , ../usuarios.php');
+            header('Location: ../usuarios.php');
             exit;
         break;
 
