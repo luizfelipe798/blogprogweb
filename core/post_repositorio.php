@@ -28,7 +28,7 @@
                         'usuario_id'          =>    $_SESSION['login']['usuario']['id']
                      ];
 
-            $insere('post', $dados);
+            insere('post', $dados);
 
         break;
 
