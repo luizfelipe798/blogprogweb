@@ -18,7 +18,7 @@ CREATE TABLE post
     titulo            VARCHAR(255)       NOT NULL,
     texto             TEXT               NOT NULL,
     usuario_id        INT                NOT NULL,
-    data_criacao      DATETIME           NOT NULL,
+    data_criacao      DATETIME           NOT NULL      DEFAULT now(),
     data_postagem     DATETIME           NOT NULL,
     
     KEY fk_post_usuario_idx(usuario_id),
