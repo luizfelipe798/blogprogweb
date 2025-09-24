@@ -80,6 +80,7 @@
                                 <input class="form-control" type="date"
                                        require="required"
                                        id="data_postagem"
+                                       name="data_postagem"
                                        value="<?php echo $data ?>">
                             </div>
                             <div class="col-md-3">

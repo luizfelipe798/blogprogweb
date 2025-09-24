@@ -4,6 +4,7 @@
     require_once 'conexao_mysql.php';
     require_once 'sql.php';
     require_once 'mysql.php';
+
     $salt = '$exemplosaltifsp';
 
     foreach($_POST as $indice => $dado)
@@ -71,13 +72,12 @@
         case 'status':
             $id = (int)$id;
             $valor = (int)$valor;
-            echo $valor;
             $dados = ['ativo' => $valor];
 
             $criterio = [['id', '=', $id]];
 
             atualiza('usuario', $dados, $criterio);
-            echo 'aqui';
+
             header('Location: ../usuarios.php');
             exit;
         break;

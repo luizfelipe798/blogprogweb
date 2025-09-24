@@ -11,14 +11,14 @@
         }
     
         $instrucao = insert($entidade, $coringa);
-
+        echo $instrucao;
         $conexao = conecta();
 
         $stmt = mysqli_prepare($conexao, $instrucao);
 
         eval('mysqli_stmt_bind_param($stmt, \'' . implode('', $tipo) . '\',$'
         . implode(', $', array_keys($dados)) . ');');
-
+        echo $instrucao;
         mysqli_stmt_execute($stmt);
 
         $retorno = (boolean)mysqli_stmt_affected_rows($stmt);
