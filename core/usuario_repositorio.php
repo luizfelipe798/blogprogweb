@@ -71,13 +71,13 @@
         case 'status':
             $id = (int)$id;
             $valor = (int)$valor;
-
+            echo $valor;
             $dados = ['ativo' => $valor];
 
             $criterio = [['id', '=', $id]];
 
             atualiza('usuario', $dados, $criterio);
-
+            echo 'aqui';
             header('Location: ../usuarios.php');
             exit;
         break;
@@ -86,9 +86,9 @@
             $id = (int)$id;
             $valor = (int)$valor;
 
-            $dados = ['adm' => valor];
+            $dados = ['adm' => $valor];
 
-            $criterio = [['id'], '=', $id];
+            $criterio = [['id', '=', $id]];
 
             atualiza('usuario', $dados, $criterio);
 
