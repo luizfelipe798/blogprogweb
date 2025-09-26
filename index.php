@@ -45,10 +45,11 @@
 
                         if(!empty($busca))
                         {
-                            $criterio[] = ['AND', 'texto', 'like', "%($busca)%"];
+                            $criterio[] = ['AND', 'texto', 'like', "%{$busca}%"];
                         }
 
-                        $posts = buscar('post', 
+                        $posts = buscar(
+                                        'post', 
                                         [
                                             'titulo',
                                             'data_postagem',
