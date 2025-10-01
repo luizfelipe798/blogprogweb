@@ -1,4 +1,7 @@
  <?php
+    // Esse aquivo é responsável por realizar operações no banco de dados MySQL
+    // como inserir, atualizar, deletar e buscar registros
+    
     function insere(string $entidade, array $dados) : bool
     {
         $retorno = false;
@@ -198,5 +201,4 @@
 
         return $retorno;
     }
-
 ?>

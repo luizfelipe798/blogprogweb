@@ -1,4 +1,8 @@
 <?php
+    // Esse arquivo é responsável por conectar e desconectar do banco de dados MySQL
+    // e retornar a conexão quando necessário
+
+    // Retorna objeto myhsqli, que representa a conexão com o banco de dados
     function conecta() : mysqli
     {
         $servidor = 'localhost';
@@ -6,7 +10,7 @@
         $port = 3306;
         $usuario = 'root';
         $senha = '815674815';
-
+    // tentativa de se conectar ao banco de dados
         $conexao = mysqli_connect($servidor, $usuario, $senha, $banco, $port);
 
         if(!$conexao)

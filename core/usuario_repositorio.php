@@ -1,4 +1,8 @@
 <?php
+
+    // Esse arquivo é responsável por receber as requisições de inserção, atualização, deleção e login de usuários
+    // e redirecionar o usuário de volta para a página inicial do blog
+    
     session_start();
     require_once '../includes/funcoes.php';
     require_once 'conexao_mysql.php';
@@ -23,7 +27,8 @@
             $dados = [
                 'nome' => $nome,
                 'email' => $email,
-                'senha' => crypt($senha, $salt)];
+                'senha' => crypt($senha, $salt)
+            ];
 
             insere('usuario', $dados);
 
@@ -71,7 +76,9 @@
 
         case 'status':
             $id = (int)$id;
+
             $valor = (int)$valor;
+
             $dados = ['ativo' => $valor];
 
             $criterio = [['id', '=', $id]];
@@ -79,11 +86,13 @@
             atualiza('usuario', $dados, $criterio);
 
             header('Location: ../usuarios.php');
+
             exit;
         break;
 
         case 'adm':
             $id = (int)$id;
+
             $valor = (int)$valor;
 
             $dados = ['adm' => $valor];
@@ -95,7 +104,6 @@
             header('Location: ../usuarios.php');
             
             exit;
-
         break;
     }
 

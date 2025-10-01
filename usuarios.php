@@ -11,7 +11,7 @@
                 <?php
                     include 'includes/topo.php';
                     include 'includes/valida_login.php';
-                    if($_SESSION['login']['usuario']['adm'] !==1)
+                    if($_SESSION['login']['usuario']['adm'] !== 1)
                     {
                         header('Location: index.php');
                     }
@@ -99,6 +99,6 @@
             </div>
         </div>
     </div>
-    <script src="lib/bootstrap-4.2.1.-dist/js/bootstrap.min.js"></script>
+    <script src="lib/bootstrap-4.2.1-dist/js/bootstrap.min.js"></script>
 </body>
 </html>

@@ -50,7 +50,7 @@
                         <label for="nome">Nome</label>
                         <input class="form-control" type="text"
                                require="required" id="nome" name="nome"
-                               value="<?php echo $entidade['email'] ?? '' ?>">
+                               value="<?php echo $entidade['nome'] ?? '' ?>">
                     </div>
                     <div clas="form-group">
                         <label for="email">E-mail</label>

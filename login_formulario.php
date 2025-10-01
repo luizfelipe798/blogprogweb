@@ -15,7 +15,7 @@
             <div class="col-md-12">
                 <?php include 'includes/menu.php'; ?>
             </div>
-            <div class="col-md-10" syle="padding-top: 50px;">
+            <div class="col-md-10" style="padding-top: 50px;">
                 <div class="card-header">Login</div>
                 <div class="card-body">
                     <form method="post" action="core/usuario_repositorio.php">
@@ -23,12 +23,12 @@
                         <div class="form-group">
                             <label for="email">E-mail</label>
                             <input class="form-control" type="text"
-                                require="required" id="email" name="email">
+                                required="required" id="email" name="email">
                         </div>
                         <div class="form-group">
                             <label for="senha">Senha</label>
                             <input class="form-control" type="text"
-                                require="required" id="senha" name="senha">
+                                required="required" id="senha" name="senha">
                         </div>
                         <div class="text-right">
                             <button class="btn btn-success"

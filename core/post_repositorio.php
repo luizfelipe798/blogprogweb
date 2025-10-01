@@ -1,4 +1,7 @@
 <?php
+    // Esse é responsável por receber as requisições de inserção, atualização e deleção de posts
+    // e redirecionar o usuário de volta para a página inicial do blog
+
     session_start();
     require_once '../includes/valida_login.php';
     require_once '../includes/funcoes.php';

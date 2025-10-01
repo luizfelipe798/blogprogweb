@@ -1,4 +1,7 @@
 <?php
+    // Esse arquivo é responsável por criar as instruções SQL para operações básicas
+    // como inserir, atualizar, deletar e buscar registros
+
     function insert(string $entidade, array $dados) : string
     {
         $instrucao = "INSERT INTO {$entidade}";
