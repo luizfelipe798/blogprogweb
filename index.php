@@ -11,6 +11,7 @@
                     <!--Topo //-->
                     <?php
                         include 'includes/topo.php';
+                        date_default_timezone_set('America/Sao_Paulo');
                     ?>
                 </div>
             </div>
@@ -45,7 +46,7 @@
 
                         if(!empty($busca))
                         {
-                            $criterio[] = ['AND', 'texto', 'like', "%{$busca}%"];
+                            $criterio[] = ['AND', 'titulo', 'like', "%{$busca}%"];
                         }
 
                         $posts = buscar(

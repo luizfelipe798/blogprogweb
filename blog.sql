@@ -30,6 +30,3 @@ SELECT * FROM post;
 
 TRUNCATE TABLE post;
 DELETE FROM usuario;
-	
-INSERT INTO post(titulo, texto, usuario_id, data_criacao, data_postagem)
-VALUES('Teste de postzinho para o blog', 'textinho para o blogzinho do professor murilo e do professor cassio', '24', '2025-09-17', '2025-08-10');
