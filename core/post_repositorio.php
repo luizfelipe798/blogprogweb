@@ -23,7 +23,6 @@
 
     switch($acao)
     {
-        
         case 'insert':
             $dados = [
                         'titulo'              =>    $titulo,
